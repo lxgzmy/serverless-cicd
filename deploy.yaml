@@ -1,10 +1,19 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: An AWS Serverless Specification template describing your function.
+Parameters:
+  bucket:
+    Type: String
+    Default: "serverless-cicd-lxgzmy"
+  bucketKey:
+    Type: String
+    Default: "b4a22cff1c0d2e789c64ffe9566247a5"
 Resources:
-  mycicdstack-mycicdstackTimeFunctionQQ8HEDFP1V63-1RI2OR4CV21C8:
+  mycicdstackTimeFunctionQQ8HEDFP1V63:
     Properties:
       AutoPublishAlias: Live
-      CodeUri: s3://serverless-cicd-lxgzmy/5faf50da0d822c547b2819efdd670c99
+      CodeUri: 
+        Bucket: !Ref bucket
+        Key: !Ref bucketKey
       DeploymentPreference:
         Alarms: null
         Type: Linear10PercentEvery1Minute
