@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: An AWS Serverless Specification template describing your function.
 Resources:
-  mycicdstack-mycicdstackTimeFunctionQQ8HEDFP1V63-1RI2OR4CV21C8:
+  mycicdstackTimeFunctionQQ8HEDFP1V63:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: index.handler
