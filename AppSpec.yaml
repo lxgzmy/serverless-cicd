@@ -1,9 +1,0 @@
-version: 0.0
-Resources:
-  - myLambdaFunction:
-      Type: AWS::Lambda::Function
-      Properties:
-        Name: "mycicdstack-TimeFunction-QQ8HEDFP1V63"
-        Alias: "Live"
-        CurrentVersion: "Live"
-        TargetVersion: "$Latest"
