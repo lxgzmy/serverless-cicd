@@ -5,7 +5,7 @@ var calc = require('../calculator.js');
 describe('Calculator Tests', function () {
     describe('Addition Tests', function () {
         it('returns 1 + 1 = 2', function (done) {
-            assert.equal(calc.add(1, 1), 2);
+            assert.equal(calc.add(1, 1), 3);
             done();
         });
 
