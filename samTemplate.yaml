@@ -14,5 +14,5 @@ Resources:
         Type: Linear10PercentEvery1Minute 
         Alarms:
           # A list of alarms that you want to monitor
-          - !Ref myCicdLambdaErrorAlarm
+          # - !Ref myCicdLambdaErrorAlarm
           # - !Ref LatestVersionErrorMetricGreaterThanZeroAlarm
