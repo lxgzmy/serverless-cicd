@@ -14,5 +14,23 @@ Resources:
         Type: Linear10PercentEvery1Minute 
         Alarms:
           # A list of alarms that you want to monitor
-          # - !Ref myCicdLambdaErrorAlarm
-          # - !Ref LatestVersionErrorMetricGreaterThanZeroAlarm
+          # - !Ref AliasErrorMetricGreaterThanZeroAlarm
+  # AliasErrorMetricGreaterThanZeroAlarm:
+  #   #DependsOn: mycicdstackTimeFunctionQQ8HEDFP1V63.Alias
+  #   Type: AWS::CloudWatch::Alarm
+  #   Properties:
+  #     AlarmName: !Sub aahelloworld-safemode-alias-${HelloWorldFunction}
+  #     AlarmDescription: "pre-deployment alarm to check for errors in the function"
+  #     #AlarmActions:
+  #     #  - !Ref AlarmTopic
+  #     ComparisonOperator: GreaterThanOrEqualToThreshold
+  #     Dimensions:
+  #       - Name: Alias
+  #         Value: !Ref HelloWorldFunction.Alias
+  #     EvaluationPeriods: 1
+  #     MetricName: Errors
+  #     Namespace: AWS/Lambda
+  #     Period: '60'
+  #     Statistic: Sum
+  #     Threshold: '1'
+
